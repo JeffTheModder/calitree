@@ -1,0 +1,41 @@
+{
+    "equipment": [
+        {
+            "name": "floor",
+            "displayName": "Floor"
+        },
+        {
+            "name": "pull-up-bar",
+            "displayName": "Pull Up Bar"
+        },
+        {
+            "name": "dip-bar",
+            "displayName": "Dip Bar"
+        },
+        {
+            "name": "rings",
+            "displayName": "Rings"
+        },
+        {
+            "name": "parallettes",
+            "displayName": "Parallettes"
+        },
+        {
+            "name": "bands",
+            "displayName": "Bands"
+        },
+        {
+            "name": "handstand-stand",
+            "displayName": "Hanstand Stand"
+        }
+	],
+    "selectableSkills": [
+        {
+            "name": "oamu",
+            "displayName": "One Arm Muscle Up",
+            "difficulty": "Elite",
+            "skillSpacing": [150, 300, 450, 580, 670],
+            "radial": true
+        }
+    ]
+}
