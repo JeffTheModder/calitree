@@ -5,12 +5,12 @@
             "displayName": "Floor"
         },
         {
-            "name": "pull-up-bar",
-            "displayName": "Pull Up Bar"
+            "name": "high-bar",
+            "displayName": "High Bar"
         },
         {
-            "name": "dip-bar",
-            "displayName": "Dip Bar"
+            "name": "pbar",
+            "displayName": "Parallel Bars"
         },
         {
             "name": "rings",
@@ -23,10 +23,6 @@
         {
             "name": "bands",
             "displayName": "Bands"
-        },
-        {
-            "name": "handstand-stand",
-            "displayName": "Hanstand Stand"
         }
 	],
     "selectableSkills": [
