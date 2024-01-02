@@ -49,13 +49,13 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth - 20, windowHeight - 20, WEBGL);
+    createCanvas(windowWidth, windowHeight, WEBGL);
     frameRate(60);
 
     textFont(openSansBold);
     textAlign(CENTER);
 
-    cameraHeight = (height/2) / tan(PI/6);
+    cameraHeight = (height/2);
     cam = createCamera();
     cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight);
 

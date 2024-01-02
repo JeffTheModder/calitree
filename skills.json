@@ -12,7 +12,7 @@
             "id": 1,
             "name": "sit-up",
             "displayName": "",
-            "equipment": "",
+            "equipment": "floor",
             "progressions": [],
             "wikiLink": ""
         },
@@ -20,7 +20,7 @@
             "id": 2,
             "name": "squat",
             "displayName": "",
-            "equipment": "",
+            "equipment": "floor",
             "progressions": [],
             "wikiLink": ""
         },
@@ -28,7 +28,7 @@
             "id": 3,
             "name": "pull-up",
             "displayName": "Pull Up",
-            "equipment": "pull-up-bar",
+            "equipment": "high-bar",
             "progressions": [],
             "wikiLink": ""
         },
@@ -36,7 +36,7 @@
             "id": 4,
             "name": "muscle-up",
             "displayName": "Muscle Up",
-            "equipment": "pull-up-bar",
+            "equipment": "high-bar",
             "progressions": [3],
             "wikiLink": ""
         },
@@ -44,7 +44,7 @@
             "id": 5,
             "name": "oa-pull-up",
             "displayName": "One Arm Pull Up",
-            "equipment": "pull-up-bar",
+            "equipment": "high-bar",
             "progressions": [3],
             "wikiLink": ""
         },
@@ -52,7 +52,7 @@
             "id": 6,
             "name": "dip",
             "displayName": "Dip",
-            "equipment": "dip-bar",
+            "equipment": "pbar",
             "progressions": [],
             "wikiLink": ""
         },
@@ -60,7 +60,7 @@
             "id": 7,
             "name": "oa-dip",
             "displayName": "One Arm Dip",
-            "equipment": "pull-up-bar",
+            "equipment": "high-bar",
             "progressions": [6],
             "wikiLink": ""
         },
@@ -68,7 +68,7 @@
             "id": 8,
             "name": "oamu",
             "displayName": "One Arm Muscle Up",
-            "equipment": "pull-up-bar",
+            "equipment": "high-bar",
             "progressions": [4, 5, 7],
             "wikiLink": ""
         }
