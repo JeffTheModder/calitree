@@ -57,7 +57,7 @@ function setup() {
 
     cameraHeight = (height/2) / tan(PI/6);
     cam = createCamera();
-    cam.setPosition(cameraPan.x, cameraPan.y + 20, cameraHeight);
+    cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight * 1.5);
 
     skills = skillsData.skills;
     equipment = treeSkillsData.equipment;
@@ -318,9 +318,9 @@ function draw() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth - 20, windowHeight - 20);
+    resizeCanvas(windowWidth, windowHeight);
     cameraHeight = (height/2) / tan(PI/6);
-    cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight);
+    cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight * 1.5);
 }
 
 function keyPressed() {
