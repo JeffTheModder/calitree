@@ -55,7 +55,7 @@ function setup() {
     textFont(openSansBold);
     textAlign(CENTER);
 
-    cameraHeight = (height/2) / tan(PI/6);
+    cameraHeight = height;
     cam = createCamera();
     cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight);
 
@@ -115,7 +115,7 @@ function draw() {
         rect(-630, -460, 1260, 920);
         fill(0);
         textSize(40);
-        text("Choose a crafting tree to display", 0, -340);
+        text("Choose a crafting tree to display", 0, -360);
 
         for (let i = 0; i < 8; i ++) {
             for (let j = 0; j < 5; j ++) {
@@ -319,7 +319,7 @@ function draw() {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    cameraHeight = (height/2) / tan(PI/6);
+    cameraHeight = height;
     cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight);
 }
 
@@ -340,7 +340,7 @@ function keyPressed() {
         }
     } else if (keyCode == DOWN_ARROW) {
         if (!statusLoadingSprites && !statusSelectingSkill) {
-            zoomLevel = min(zoomLevel * 1.1 * 1.1, 9.5);
+            zoomLevel = min(zoomLevel * 1.1 * 1.1, 8);
         }
     } else if (keyCode == ENTER) {
         if (!statusLoadingSprites && !statusSelectingSkill) {
