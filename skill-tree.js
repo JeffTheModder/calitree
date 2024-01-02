@@ -498,10 +498,10 @@ function countChildrenRecursive(treeSkill, skill, skills) {
         treeSkill.children = 1;
     } else {
         for (let i = 0; i < skill.progressions.length; i ++) {
-            if (skills[skill.progressions[i]].progressions.length == 0) {
-                treeSkill.children ++;
+            if (skills[skill.progressions[i][0]].progressions.length == 0) {
+                treeSkill.children++;
             }
-            countChildrenRecursive(treeSkill, skills[skill.progressions[i]], skills);
+            countChildrenRecursive(treeSkill, skills[skill.progressions[i][0]], skills);
         }
     }
 }

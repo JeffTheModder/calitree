@@ -10,22 +10,6 @@
 		},
         {
             "id": 1,
-            "name": "sit-up",
-            "displayName": "",
-            "equipment": "floor",
-            "progressions": [],
-            "wikiLink": ""
-        },
-        {
-            "id": 2,
-            "name": "squat",
-            "displayName": "",
-            "equipment": "floor",
-            "progressions": [],
-            "wikiLink": ""
-        },
-        {
-            "id": 3,
             "name": "pull-up",
             "displayName": "Pull Up",
             "equipment": "high-bar",
@@ -33,43 +17,107 @@
             "wikiLink": ""
         },
         {
-            "id": 4,
-            "name": "muscle-up",
-            "displayName": "Muscle Up",
-            "equipment": "high-bar",
-            "progressions": [3],
+            "id": 2,
+            "name": "dip",
+            "displayName": "Dip",
+            "equipment": "pbars",
+            "progressions": [],
             "wikiLink": ""
         },
         {
+            "id": 3,
+            "name": "pl-lean",
+            "displayName": "Planche Lean",
+            "equipment": "floor",
+            "progressions": [],
+            "wikiLink": ""
+        },
+        {
+            "id": 4,
+            "name": "pl",
+            "displayName": "Full Planche",
+            "equipment": "parallettes",
+            "progressions": [[0, 30], [1, 15], [2, 20], [3, 10]],
+            "wikiLink": "https://street-workout.fandom.com/wiki/Planche"
+        },
+        {
             "id": 5,
-            "name": "oa-pull-up",
-            "displayName": "One Arm Pull Up",
-            "equipment": "high-bar",
-            "progressions": [3],
+            "name": "plpu",
+            "displayName": "Planche Push Up",
+            "equipment": "parallettes",
+            "progressions": [[4, 7]],
             "wikiLink": ""
         },
         {
             "id": 6,
-            "name": "dip",
-            "displayName": "Dip",
-            "equipment": "pbar",
+            "name": "rto-sup",
+            "displayName": "RTO Support Hold",
+            "equipment": "rings",
             "progressions": [],
             "wikiLink": ""
         },
         {
             "id": 7,
-            "name": "oa-dip",
-            "displayName": "One Arm Dip",
-            "equipment": "high-bar",
-            "progressions": [6],
+            "name": "rings-pl",
+            "displayName": "Rings Planche",
+            "equipment": "rings",
+            "progressions": [[4, 10], [6, 60]],
             "wikiLink": ""
         },
         {
             "id": 8,
-            "name": "oamu",
-            "displayName": "One Arm Muscle Up",
+            "name": "rings-plpu",
+            "displayName": "Rings Planche Push Up",
+            "equipment": "rings",
+            "progressions": [[5, 1], [7, 7]],
+            "wikiLink": ""
+        },
+        {
+            "id": 9,
+            "name": "skin-the-cat",
+            "displayName": "Skin The Cat",
             "equipment": "high-bar",
-            "progressions": [4, 5, 7],
+            "progressions": [],
+            "wikiLink": ""
+        },
+        {
+            "id": 10,
+            "name": "bl",
+            "displayName": "Back Lever",
+            "equipment": "high-bar",
+            "progressions": [[0, 30], [1, 20], [2, 10], [9, 1]],
+            "wikiLink": "https://street-workout.fandom.com/wiki/Back_Lever"
+        },
+        {
+            "id": 11,
+            "name": "blpu",
+            "displayName": "Back Lever Pull Up",
+            "equipment": "high-bar",
+            "progressions": [[10, 30]],
+            "wikiLink": ""
+        },
+        {
+            "id": 12,
+            "name": "rings-blpu",
+            "displayName": "Rings Back Lever Pull Up",
+            "equipment": "rings",
+            "progressions": [[6, 45], [11, 1]],
+            "wikiLink": ""
+        },
+        {
+            "id": 13,
+            "name": "pelican",
+            "displayName": "Pelican",
+            "equipment": "pbars",
+            "progressions": [[5, 5], [11, 5]],
+            "wikiLink": ""
+        },
+        {
+            "id": 14,
+            "name": "rings-pelican",
+            "displayName": "Rings Pelican",
+            "equipment": "rings",
+            "progressions": [[8, 5], [12, 5], [13, 1]],
             "wikiLink": ""
         }
     ]

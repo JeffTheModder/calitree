@@ -27,8 +27,8 @@
 	],
     "selectableSkills": [
         {
-            "name": "oamu",
-            "displayName": "One Arm Muscle Up",
+            "name": "rings-pelican",
+            "displayName": "Rings Pelican",
             "difficulty": "Elite",
             "skillSpacing": [150, 300, 450, 580, 670],
             "radial": true
