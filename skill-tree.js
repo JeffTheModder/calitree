@@ -55,7 +55,7 @@ function setup() {
     textFont(openSansBold);
     textAlign(CENTER);
 
-    cameraHeight = (height/2);
+    cameraHeight = (height/2) / tan(PI/6);
     cam = createCamera();
     cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight);
 
