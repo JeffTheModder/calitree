@@ -24,7 +24,7 @@ let openSansBold; // Font file used for UI text
 
 let cameraPan = new p5.Vector(0, 0); // Current position of the camera, relative to the centre of the crafting tree
 let cameraHeight; // Distance from the camera to the canvas, affects visual zoom
-let zoomLevel = 2; // Zoom percent relative to 1x, higher zooms out, affects cameraHeight
+let zoomLevel = 1; // Zoom percent relative to 1x, higher zooms out, affects cameraHeight
 let dragStart = new p5.Vector(); // Mouse position at the beginning of a drag
 let dragMouse = new p5.Vector(); // Mouse position during a drag, relative to dragStart and accounting for zoomLevel
 let panStart = new p5.Vector(); // cameraPan at the beginning of a drag
@@ -57,7 +57,7 @@ function setup() {
 
     cameraHeight = (height/2) / tan(PI/6);
     cam = createCamera();
-    cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight);
+    cam.setPosition(cameraPan.x, cameraPan.y + 20, cameraHeight);
 
     skills = skillsData.skills;
     equipment = treeSkillsData.equipment;
