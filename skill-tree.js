@@ -115,7 +115,7 @@ function draw() {
         rect(-630, -460, 1260, 920);
         fill(0);
         textSize(40);
-        text("Choose a crafting tree to display", 0, -360);
+        text("Choose a skill progression to view", 0, -360);
 
         for (let i = 0; i < 8; i ++) {
             for (let j = 0; j < 5; j ++) {
@@ -153,7 +153,7 @@ function draw() {
             fill(255);
             rect(-400, -175, 800, 350);
             fill(0);
-            text("Choose a crafting tree layout", 0, -100);
+            text("Choose a progression tree layout", 0, -100);
             image(layoutImages["treeTop"], -360, -60, 120, 120);
             image(layoutImages["treeLeft"], -210, -60, 120, 120);
             image(layoutImages["treeBottom"], -60, -60, 120, 120);
@@ -411,11 +411,11 @@ function loadSkillRecursive(treeSkill, parentSkill) {
             }
             newSkillPosition.add(parentSkill.position);
             // let tempSpacing = [300, 600, 800, 950, 1100, 1250, 1400, 1550];
-            newSkill = new Skill(newSkillPosition.x, newSkillPosition.y, skills[progression], parentSkill, selectedSkill.skillSpacing);
+            newSkill = new Skill(newSkillPosition.x, newSkillPosition.y, skills[progression[0]], skills[progression[1]], parentSkill, selectedSkill.skillSpacing);
             // TEMP: ig
             // newSkill = new Skill(newSkillPosition.x, newSkillPosition.y, skills[progression], parentSkill, tempSpacing);
             treeSkills.push(newSkill);
-            loadSkillRecursive(skills[progression], newSkill);
+            loadSkillRecursive(skills[progression[0]], newSkill);
         }
     }
 }
@@ -498,10 +498,10 @@ function countChildrenRecursive(treeSkill, skill, skills) {
         treeSkill.children = 1;
     } else {
         for (let i = 0; i < skill.progressions.length; i ++) {
-            if (skills[skill.progressions[0]].progressions.length == 0) {
-                treeSkill.children ++;
+            if (skills[skill.progressions[i][0]].progressions.length == 0) {
+                treeSkill.children++;
             }
-            countChildrenRecursive(treeSkill, skills[skill.progressions[0]], skills);
+            countChildrenRecursive(treeSkill, skills[skill.progressions[i][0]], skills);
         }
     }
 }
