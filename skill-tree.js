@@ -411,12 +411,15 @@ function loadSkillRecursive(treeSkill, parentSkill) {
             }
             newSkillPosition.add(parentSkill.position);
             // let tempSpacing = [300, 600, 800, 950, 1100, 1250, 1400, 1550];
-            console.log(skills, progression)
+            console.log(skills)
+            console.log(progression)
             newSkill = new Skill(newSkillPosition.x, newSkillPosition.y, skills[progression[0]], progression[1], parentSkill, selectedSkill.skillSpacing);
             console.log(newSkill)
             // TEMP: ig
             // newSkill = new Skill(newSkillPosition.x, newSkillPosition.y, skills[progression], parentSkill, tempSpacing);
             treeSkills.push(newSkill);
+            console.log(skills)
+            console.log(progression)
             loadSkillRecursive(skills[progression[0]], newSkill);
         }
     }
