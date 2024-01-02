@@ -115,7 +115,7 @@ function draw() {
         rect(-630, -460, 1260, 920);
         fill(0);
         textSize(40);
-        text("Choose a crafting tree to display", 0, -360);
+        text("Choose a crafting tree to display", 0, -340);
 
         for (let i = 0; i < 8; i ++) {
             for (let j = 0; j < 5; j ++) {
