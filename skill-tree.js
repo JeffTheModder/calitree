@@ -465,9 +465,9 @@ function loadCraftingTree() {
 
     if (selectedLayout == "radial") {
         skillSpacing = selectedSkill.skillSpacing;
-        firstSkill = new Skill(0, 0, selectedSkill.skill, null, skillSpacing);
+        firstSkill = new Skill(0, 0, selectedSkill.skill, 1, null, skillSpacing);
     } else {
-        firstSkill = new Skill(0, 0, selectedSkill.skill); // TODO: Does this need a null at the end?
+        firstSkill = new Skill(0, 0, selectedSkill.skill, 1); // TODO: Does this need a null at the end?
     }
     treeSkills.push(firstSkill);
     loadSkillRecursive(selectedSkill.skill, firstSkill);
