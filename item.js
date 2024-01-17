@@ -1,8 +1,9 @@
 class Skill {
-    constructor(x, y, skill, parent, skillSpacing) {
+    constructor(x, y, skill, quantity, parent, skillSpacing) {
         // this.position = new p5.Vector(x, y);
         this.position = new p5.Vector();
         this.skill = skill;
+        this.quantityNeeded = quantity;
         this.parent = parent;
         this.socialDistance = 100;
         this.children = 0;
@@ -13,8 +14,15 @@ class Skill {
             if (skillSpacing != null) {
                 this.skillSpacing = skillSpacing[this.skillSpacingIndex];
             }
+            if (this.parent.skill.name.substring(0, 4) == "any-") {
+                this.quantityNeeded = parent.quantityNeeded;
+                this.quantityTotal = parent.quantityTotal;
+            } else {
+                this.quantityTotal = ceil(this.quantityNeeded * this.parent.quantityTotal / this.parent.skill.quantityMade);
+            }
         } else {
             this.skillSpacingIndex = -1;
+            this.quantityTotal = 1;
             this.socialDistance = 0;
         }
     }
@@ -66,6 +74,13 @@ class Skill {
         circle(0, 0, 30000);
         fill(255);
         textSize(25);
+        let nameAndQuantity = this.skill.displayName;
+        if (this.quantityNeeded > 1) {
+            nameAndQuantity = concat(nameAndQuantity, " x" + this.quantityNeeded);
+        }
+        if (this.quantityTotal > 1) {
+            nameAndQuantity = concat(nameAndQuantity, " (x" + this.quantityTotal + " total)");
+        }
         let rectWidth = max(160, textWidth(this.skill.displayName) + 65);
         let rectHeight = 300;
         textSize(15);
@@ -91,6 +106,20 @@ class Skill {
             cursor(ARROW);
         }
 
+        let quantityText;
+        let quantityOffset = 0;
+        if (this.quantityNeeded > 1 && this.quantityTotal > this.quantityNeeded) {
+            quantityText = "(x" + this.quantityNeeded + ", x" + this.quantityTotal + " total)";
+            quantityOffset = 25;
+        } else if (this.quantityNeeded > 1) {
+            quantityText = "(x" + this.quantityNeeded + ")";
+            quantityOffset = 25;
+        } else if (this.quantityTotal > this.quantityNeeded) {
+            quantityText = "(x" + this.quantityTotal + " total)";
+            quantityOffset = 25;
+        }
+        rectHeight += quantityOffset;
+
         rect(-rectWidth / 2, -(displayedHeight / 1.2) - 45, rectWidth, rectHeight);
         image(this.skill.sprite, -(displayedWidth / 1.1), -(displayedHeight / 1.1),
               displayedWidth * 1.8, displayedHeight * 1.8)
@@ -98,6 +127,9 @@ class Skill {
         textSize(25);
         text(this.skill.displayName, 0, (displayedHeight / 1.2) + 60);
         textSize(15);
+        if (quantityOffset > 0) {
+            text(quantityText, 0, (displayedHeight / 1.2) + 90);
+        }
 
         if (equipment != null) {
             if (equipment.name == "floor") {
