@@ -55,7 +55,7 @@ function setup() {
     textFont(openSansBold);
     textAlign(CENTER);
 
-    cameraHeight = height;
+    cameraHeight = (height/2) / tan(PI/6);
     cam = createCamera();
     cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight);
 
@@ -318,7 +318,7 @@ function draw() {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    cameraHeight = height;
+    cameraHeight = (height/2) / tan(PI/6);
     cam.setPosition(cameraPan.x, cameraPan.y, cameraHeight);
 }
 
